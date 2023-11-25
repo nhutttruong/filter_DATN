@@ -25,10 +25,10 @@ export const AuthContextProvider = (props) => {
       };
     return (
         <AuthContext.Provider 
-        value={{
-            token,
-            onLogin: handleLogin,
-            onLogout: handleLogout,
+            value={{
+                token,
+                onLogin: handleLogin,
+                onLogout: handleLogout,
             }}>
 
             {props.children}

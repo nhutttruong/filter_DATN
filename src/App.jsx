@@ -2,26 +2,21 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
-import { BrowserRouter } from 'react-router-dom'
-
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter, useLocation } from 'react-router-dom'
 import { AuthContextProvider } from './context/AuthContext'
-import RoutesApp from './routes/routes'
 import Header from './components/Header'
-
+import RoutesApp from './routes/RoutesApp'
+import Layout from './layout/layout'
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
-    <BrowserRouter>
-      <AuthContextProvider>
-          <div className='App'>
-            <Header/>
-            <RoutesApp/>
-          </div>
-
-      </AuthContextProvider>
-    </BrowserRouter>
+        <BrowserRouter>
+            <AuthContextProvider>
+              <Layout/>
+              <RoutesApp/>
+          </AuthContextProvider>
+        </BrowserRouter>
   )
 }
 

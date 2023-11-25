@@ -1,0 +1,20 @@
+.text-font-darker {
+    color: #1E4540;
+}
+
+.my-header{
+    background-color: #419489 !important;
+    height: 60px;
+}
+
+.my-header-bg-icon{
+    width: 40px;
+    height: 40px;
+    background-color: #CBEDE8;
+    display: flex;
+    justify-content: center;
+}
+.my-header-icon{
+    width: 20px;
+    height: 25px;
+}
