@@ -1,13 +1,14 @@
 import React from 'react'
 import { useAuth } from '../../context/AuthContext'
 
-import Header from '../../components/Header'
 
+import SlideShow from '../../components/SlideShow'
 const Homepage = () => {
     const auth = useAuth()  
   return (
-    <div>
+    <div style={{backgroundColor: "#E6F6F4"}}>
         <h1>This is homepage</h1>
+        <SlideShow/>
     </div>
     
   )

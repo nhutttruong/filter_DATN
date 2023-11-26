@@ -18,3 +18,41 @@
     width: 20px;
     height: 25px;
 }
+
+
+
+
+/*Slider*/
+
+.my-slider {
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom_button_slideshow{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    display: flex !important;
+    align-items: center;
+    justify-content: center !important;
+    text-align: center !important;
+    border: 2px solid #419489;
+    background-color: white;
+    padding: 0px;
+    top: -30%;
+}
+
+.custom_button_prev{
+    margin-left: 90%;
+}
+.my-slider-card{
+    width: 580px;
+    height: 190px;
+    background-color: #CBEDE8;
+    display: flex;
+    align-items: center;
+}
