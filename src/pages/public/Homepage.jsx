@@ -1,17 +1,32 @@
-import React from 'react'
-import { useAuth } from '../../context/AuthContext'
+import React, { useState } from "react";
+import { useAuth } from "../../context/AuthContext";
 
-
-import SlideShow from '../../components/SlideShow'
+import SlideShow from "../../components/SlideShow";
+import Result from "../../components/Result";
+import Filter from "../../components/Filter";
+import FilterSelected from "../../components/FilterSelected";
 const Homepage = () => {
-    const auth = useAuth()  
+  const auth = useAuth();
+  const [showResult, setShowResult] = useState(false);
+  const [selectedFilters, setSelectedFilters] = useState([]);
   return (
-    <div style={{backgroundColor: "#E6F6F4"}}>
-        <h1>This is homepage</h1>
-        <SlideShow/>
-    </div>
-    
-  )
-}
+    <div style={{ backgroundColor: "#ffff" }}>
+      <SlideShow />
+      <Filter
+        showResult={showResult}
+        setShowResult={setShowResult}
+        setSelectedFilters={setSelectedFilters}
+      />
+      {selectedFilters.length !== 0 && (
+        <FilterSelected
+          selectedFilters={selectedFilters}
+          setSelectedFilters={setSelectedFilters}
+        />
+      )}
 
-export default Homepage
+      {showResult && <Result />}
+    </div>
+  );
+};
+
+export default Homepage;
